@@ -67,7 +67,9 @@ function App() {
   const handlePause = () => {
     setPause(!false);
     clearInterval(timerId);
-    
+
+  
+
 
   };
 
