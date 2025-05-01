@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import Carusoul from "./Components/Carusoul";
 
 function App() {
   const [isshow, setisshow] = useState(false);
@@ -132,6 +133,12 @@ useEffect(() => {
           </div>
         </>
       )}
+
+
+
+      <>
+        <Carusoul/>
+      </>
     </div>
   );
 }
