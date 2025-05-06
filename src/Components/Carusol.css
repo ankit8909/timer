@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+img{
+    height: 400px;
+    width: 100%;
+}
+
+.container{
+    border: 2px solid black;
+    position: relative;
+}
+.left-btn,
+.right-btn{
+    border: 2px solid red;
+    position: absolute;
+    top: 33%;
+    padding: 0.5rem;
+    color: white;
+    font-size: 2rem;
+
+}
+
+.left-btn{
+    left: 1rem;
+}
+.right-btn{
+      right: 1rem;
+}

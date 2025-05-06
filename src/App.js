@@ -1,6 +1,8 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Carusoul from "./Components/Carusoul";
+import OTP from "./Components/OTP";
+import Pagination from "./Components/Pagination";
 
 function App() {
   const [isshow, setisshow] = useState(false);
@@ -138,6 +140,10 @@ useEffect(() => {
 
       <>
         <Carusoul/>
+        <br/>
+        <OTP />
+        <br/>
+        <Pagination />
       </>
     </div>
   );
