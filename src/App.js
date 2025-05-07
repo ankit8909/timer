@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Carusoul from "./Components/Carusoul";
 import OTP from "./Components/OTP";
 import Pagination from "./Components/Pagination";
+import ToastNotification from "./Components/ToastNotification";
 
 function App() {
   const [isshow, setisshow] = useState(false);
@@ -97,7 +98,7 @@ useEffect(() => {
   
   return (
     <div className="App">
-      {!isshow ? (
+      {/* {!isshow ? (
         <>
           <div className="input-container">
             <div className="input-box">
@@ -134,16 +135,18 @@ useEffect(() => {
             </div>
           </div>
         </>
-      )}
+      )} */}
 
 
 
       <>
-        <Carusoul/>
+        {/* <Carusoul/> */}
         <br/>
-        <OTP />
+        {/* <OTP /> */}
         <br/>
-        <Pagination />
+        {/* <Pagination /> */}
+        <br />
+        <ToastNotification />
       </>
     </div>
   );

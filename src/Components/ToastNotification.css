@@ -1,0 +1,64 @@
+body {
+  background-color: burlywood;
+}
+
+.toast-container {
+  position: fixed;
+  top: 0.5rem;
+  right: 5.9rem;
+ text-align: center;
+ width: 200px;
+
+}
+.toast {
+  background-color: green;
+  width: 12rem;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  position: relative;
+  animation: slide 1s 1;
+  cursor: pointer;
+  margin: 0.5rem;
+
+  span {
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    cursor:pointer;
+  }
+}
+
+.success{
+    background-color: green;
+}
+.error{
+    background-color:red;
+}
+.warning{
+    background-color: orange;
+}
+.info{
+    background-color: aqua;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.toast-btn{
+    border: 0.5px solid rgb(105, 102, 102);
+    width: 100px;
+    font-size: 14px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: aliceblue;
+    outline: none;
+    padding: 0;
+
+}
