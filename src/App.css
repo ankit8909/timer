@@ -89,3 +89,8 @@ button {
     transform: rotate(360deg);
   }
 }
+
+.break {
+  margin-top: 20rem;
+}
+

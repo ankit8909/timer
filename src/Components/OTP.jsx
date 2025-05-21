@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+ import React, { useEffect, useRef, useState } from "react";
 import "../Components/OTp.css";
 
 function OTP() {
   const [inputs, setInputs] = useState(new Array(4).fill(""));
   const [inputArr, setInputArr] = useState(inputs);
-  // console.log(inputs);
+
+  console.log("ye hai length ",inputArr.length);
   console.log(inputArr);
 
   const refs = [useRef(), useRef(), useRef(), useRef()];
@@ -19,6 +20,7 @@ function OTP() {
 
     copyArray[index] = val;
     setInputArr(copyArray);
+    console.log("ye HAI inp", inputArr)
 
     // refs[index + 1].current.focus();    initial-1
 

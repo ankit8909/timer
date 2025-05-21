@@ -12,12 +12,14 @@ function Pagination() {
     setdata(jsonData);
   };
 
-  const nextButton = Array.from({length:1}, (_, index)=> pageNo+index)
+  const nextButton = Array.from({ length: 1 }, (_, index) => pageNo + index);
 
-  const prevButton = Array.from({length:2   }, (_,index)=> pageNo-1-index).filter((value)=> value >0).reverse();
+  const prevButton = Array.from({ length: 2 }, (_, index) => pageNo - 1 - index)
+    .filter((value) => value > 0)
+    .reverse();
 
   const mergeArr = [...prevButton, ...nextButton];
-  console.log(mergeArr)
+  console.log(mergeArr);
 
   const handlePrev = () => {
     if (pageNo > 1) setpageNo(pageNo - 1);
@@ -41,15 +43,15 @@ function Pagination() {
         })}
       </div>
 
-      {pageNo > 1 ? <button onClick={handlePrev}>Prev</button> : ""}
-      {mergeArr.map((cv, index)=>{
-        return(
-            <button onClick={()=>setpageNo(cv)}> {cv} </button>
-
-        )
-      })}
-
+      <div className="pgination">
+        {pageNo > 1 ? <button onClick={handlePrev}>Prev</button> : ""}
+        {mergeArr.map((cv, index) => {
+          return <button onClick={() => setpageNo(cv)}> {cv} </button>;
+        })}
       <button onClick={handleNext}>Next</button>
+
+      </div>
+
     </div>
   );
 }
