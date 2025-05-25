@@ -8,37 +8,50 @@ import AutoComplete from "./Components/AutoComplete/AutoComplete";
 import TimerClock from "./Components/TimerClock/TimerClock";
 import DefaultContainer from "./Components/DefaultContainer";
 
+import TabComp from "./Components/TabComponent/TabComp";
+
 function App() {
-  const [productData, setproductData] = useState([])
-   useEffect(()=>{
-   console.log(productData)
+ 
 
-    fetch("https://dummyjson.com/products").then((res)=>res.json()).then((res)=>setproductData(res.products.map(ele=>(
-      {
-        id:ele.id,
-        title:ele.title,
-        brand:ele.brand,
-        description:ele.description,
-        image:ele.images[0],
+  const [productData, setproductData] = useState([]);
+  useEffect(() => {
+    console.log(productData);
 
-      }
-    )))).catch((err)=>console.log(err));
-   },[])
+    fetch("https://dummyjson.com/products")
+      .then((res) => res.json())
+      .then((res) =>
+        setproductData(
+          res.products.map((ele) => ({
+            id: ele.id,
+            title: ele.title,
+            brand: ele.brand,
+            description: ele.description,
+            image: ele.images[0],
+          }))
+        )
+      )
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <>
-      <Carusoul/>
+      {/* <Carusoul /> */}
       <br />
       {/* <OTP /> */}
 
-      <DefaultContainer />
+      {/* <DefaultContainer /> */}
       <br />
-      <Pagination />
+      {/* <Pagination /> */}
       <br />
-      <TimerClock />
+      {/* <TimerClock /> */}
       <br />
-      <ToastNotification />
-      <AutoComplete productData={productData}  />
+      {/* <ToastNotification /> */}
+      {/* <AutoComplete productData={productData} /> */}
+
+      <TabComp />
+
+     
+
      
     </>
   );
