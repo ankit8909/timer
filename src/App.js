@@ -9,6 +9,8 @@ import TimerClock from "./Components/TimerClock/TimerClock";
 import DefaultContainer from "./Components/DefaultContainer";
 
 import TabComp from "./Components/TabComponent/TabComp";
+import Header from "./Components/MultipleDropDown/Header";
+import DatePicker from "./Components/DatePicker/Datepicker";
 
 function App() {
  
@@ -48,7 +50,10 @@ function App() {
       {/* <ToastNotification /> */}
       {/* <AutoComplete productData={productData} /> */}
 
-      <TabComp />
+      {/* <TabComp /> */}
+      <Header />
+
+      <DatePicker />
 
      
 
